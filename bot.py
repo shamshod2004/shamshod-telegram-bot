@@ -20,6 +20,7 @@ async def check_subs(user_id: int) -> bool:
 async def start_handler(message: types.Message):
     user_id = message.from_user.id
     if not await check_subs(user_id):
+        instagram='kino time 24/7'
         markup = InlineKeyboardMarkup(
             inline_keyboard=[
                 [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
