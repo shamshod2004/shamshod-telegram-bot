@@ -75,13 +75,13 @@ async def get_file_id(message: types.Message):
     else:
         await message.answer("🚫 Ushbu buyruq faqat adminlar uchun mavjud!")
 
-@dp.message(F.text == "1")
+@dp.message(F.text == "1") #buyerga kino kodi kiritiladi
 async def send_video(message: types.Message):
     user_id = message.from_user.id
     
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
-        file_id = "BAACAgIAAxkBAAMOaM_Ibr27EHfjnyq5sxyntUOM_O0AAn1-AAIKCHhKRrFHPjjGK8g2BA"
-        await message.answer_video(file_id, caption="🎬 Isquvar")
+        file_id = "BAACAgIAAxkBAAMOaM_Ibr27EHfjnyq5sxyntUOM_O0AAn1-AAIKCHhKRrFHPjjGK8g2BA" #buyerga kino id kiritiladi
+        await message.answer_video(file_id, caption="🎬 Isquvar") #buyerga kino nomi kiritiladi
     else:
         await message.answer('telegram kanalga obuna boling')
         markup = InlineKeyboardMarkup(
