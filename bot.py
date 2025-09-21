@@ -25,7 +25,7 @@ async def start_handler(message: types.Message):
             inline_keyboard=[
                 [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
             ] + [
-                [InlineKeyboardButton(text=f"{instagram},",url=f"https://www.instagram.com/kino_time24_7?igsh=dDNwb3RqaHg0NWFi")],  
+                [InlineKeyboardButton(text=f"{instagram}",url=f"https://www.instagram.com/kino_time24_7?igsh=dDNwb3RqaHg0NWFi")],  
                 [InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]
             ]
         )
