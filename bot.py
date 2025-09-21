@@ -118,13 +118,13 @@ async def send_video(message: types.Message):
     
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
         file_id = "BAACAgIAAxkBAAMkaM_LTITXUe-QO7uQLV9RveS8a2wAAsd_AAKeD8lJmUuS3jkgBMY2BA"
-        await message.answer_video(file_id, caption="🏷️ Anime nomi: Log harizon
-🖋️ Janri: Drama, Fantastika, Sarguzash
-🎞️ Qismlar soni: 12
-🎙️ Ovoz berdi: @uchiha_fandubbing
-💭 Tili: Uzbek
-Bu Log harizonni 4-qismi 
-Uzbek tilida 😁")
+        await message.answer_video(file_id, caption="""🏷️ Anime nomi: Log harizon
+                                                        🖋️ Janri: Drama, Fantastika, Sarguzash
+                                                        🎞️ Qismlar soni: 12
+                                                        🎙️ Ovoz berdi: @uchiha_fandubbing
+                                                        💭 Tili: Uzbek
+                                                        Bu Log harizonni 4-qismi 
+                                                        Uzbek tilida 😁""")
 
 
 
