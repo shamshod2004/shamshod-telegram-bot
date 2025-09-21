@@ -125,10 +125,6 @@ async def send_video(message: types.Message):
 💭 Tili: Uzbek
 Bu Log harizonni 4-qismi 
 Uzbek tilida 😁""")
-
-
-
-    
     else:
         await message.answer('telegram kanalga obuna boling')
         markup = InlineKeyboardMarkup(
@@ -137,6 +133,28 @@ Uzbek tilida 😁""")
             ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+
+
+
+
+@dp.message(F.text == "50")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAM0aM_NLRpb-W_2Ao_6mnMjK4AaMggAAkOAAAI5D2lKPGY2pfNr2LE2BA"
+        await message.answer_video(file_id, caption="""«Yaxshi yigit» 4-qism [360p]""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+
 
 
 
