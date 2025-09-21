@@ -25,7 +25,7 @@ async def start_handler(message: types.Message):
             inline_keyboard=[
                 [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
             ] + [
-                [InlineKeyboardButton(text=f"{instagram}",url=f"https://www.instagram.com/kino_time24_7?igsh=dDNwb3RqaHg0NWFi")],  
+                [InlineKeyboardButton(text=f"{instagram}",url=f"https://www.instagram.com/kino.dunyouz?igsh=MTdvdmJla2psaWhpMA==")],  
                 [InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]
             ]
         )
@@ -80,8 +80,8 @@ async def send_video(message: types.Message):
     user_id = message.from_user.id
     
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
-        file_id = "BAACAgIAAxkBAAMOaM_Ibr27EHfjnyq5sxyntUOM_O0AAn1-AAIKCHhKRrFHPjjGK8g2BA" #buyerga kino id kiritiladi
-        await message.answer_video(file_id, caption="🎬 Isquvar") #buyerga kino nomi kiritiladi
+        file_id = "BAACAgIAAxkBAAN_aNAEDQ_iEux5ZWFg36iiPbqk-GAAAqMSAAK066BKRsdVZQAB4qmgNgQ" #buyerga kino id kiritiladi
+        await message.answer_video(file_id, caption="🎬  Mening yigitim zombi") #buyerga kino nomi kiritiladi
     else:
         await message.answer('telegram kanalga obuna boling')
         markup = InlineKeyboardMarkup(
