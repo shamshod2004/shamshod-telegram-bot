@@ -23,7 +23,10 @@ async def start_handler(message: types.Message):
         markup = InlineKeyboardMarkup(
             inline_keyboard=[
                 [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
-            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+            ] + [
+                [InlineKeyboardButton(text=f"{instagram},",url=f"https://www.instagram.com/kino_time24_7?igsh=dDNwb3RqaHg0NWFi")],  
+                [InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]
+            ]
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
     else:
