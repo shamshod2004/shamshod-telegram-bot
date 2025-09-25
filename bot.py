@@ -116,19 +116,13 @@ async def send_video(message: types.Message):
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
 
 
-@dp.message(F.text == "45")
+@dp.message(F.text == "3")
 async def send_video(message: types.Message):
     user_id = message.from_user.id
     
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
-        file_id = "BAACAgIAAxkBAAMkaM_LTITXUe-QO7uQLV9RveS8a2wAAsd_AAKeD8lJmUuS3jkgBMY2BA"
-        await message.answer_video(file_id, caption="""🏷️Anime nomi: Log harizon
-🖋️Janri: Drama, Fantastika, Sarguzash
-🎞️ Qismlar soni: 12
-🎙️ Ovoz berdi: @uchiha_fandubbing
-💭 Tili: Uzbek
-Bu Log harizonni 4-qismi 
-Uzbek tilida 😁""")
+        file_id = "BAACAgIAAxkBAAOoaNAkfAxgMB-mjbTUr9fGLGeOTcgAAh0PAAJS5vFIXwwVOys71a02BA"
+        await message.answer_video(file_id, caption="""Biz hayvonot bog'ini sotib oldik""")
     else:
         await message.answer('telegram kanalga obuna boling')
         markup = InlineKeyboardMarkup(
