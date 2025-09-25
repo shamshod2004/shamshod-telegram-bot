@@ -97,14 +97,14 @@ async def send_video(message: types.Message):
 
 
 
-# 📌 2️⃣ Xabar "1" bo‘lsa, oldindan olingan `file_id` dagi videoni yuborish
+# 📌 2️⃣ Xabar "2" bo‘lsa, oldindan olingan `file_id` dagi videoni yuborish
 @dp.message(F.text == "2")
 async def send_video(message: types.Message):
     user_id = message.from_user.id
     
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
-        file_id = "BAACAgIAAxkBAAIIXmfRkQe74Mttq_xUjlRKgZgy5clIAAIlZAACnkFZSHYxfacQG1U3NgQ"
-        await message.answer_video(file_id, caption="🎬  Nomi: Labirint 1")
+        file_id = "BAACAgIAAxkBAAOxaNS-JLwYHlk_BtOjqJhZ58SvqxIAAuMKAAK-hqFKHs6_Ih9v0qI2BA"
+        await message.answer_video(file_id, caption="Favqulotda qongiroq")
                                                         
     else:
         await message.answer('telegram kanalga obuna boling')
