@@ -136,13 +136,13 @@ async def send_video(message: types.Message):
 
 
 
-@dp.message(F.text == "50")
+@dp.message(F.text == "4")
 async def send_video(message: types.Message):
     user_id = message.from_user.id
     
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
-        file_id = "BAACAgIAAxkBAAM0aM_NLRpb-W_2Ao_6mnMjK4AaMggAAkOAAAI5D2lKPGY2pfNr2LE2BA"
-        await message.answer_video(file_id, caption="""«Yaxshi yigit» 4-qism [360p]""")
+        file_id = "BAACAgIAAxkBAAO6aNTAuD-P1hkRT54xuNTk2bSw6iUAAhIaAAJqt6FLacWssGdHT242BA"
+        await message.answer_video(file_id, caption="""Qo'lingdan Kelsa Tutib Ol [1080p]""")
     else:
         await message.answer('telegram kanalga obuna boling')
         markup = InlineKeyboardMarkup(
