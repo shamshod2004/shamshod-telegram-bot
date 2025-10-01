@@ -196,6 +196,86 @@ sifati; [1080p]
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
 
+@dp.message(F.text == "7")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAPTaN1XMwqZe--ck5ImMyitrp9FsW4AAltUAAKIXghJPkDy0sG2Ymc2BA"
+        await message.answer_video(file_id, caption="""🍿 Kino nomi: Jannat onalar oyog'i ostida to'liq kino
+
+🇺🇿 O'zbek tilida
+
+📅 Yuklangan sanasi: 2024-08-18
+sifati; [1080p]
+🗂 Yuklash: 8660
+
+🔎 Kinoning kodi: 7
+
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+@dp.message(F.text == "8")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAPXaN1YgFVyf2HE646zmiOMHi07-i0AAuJUAAILRMhI0DiVpjJPiSk2BA"
+        await message.answer_video(file_id, caption="""🍿 Kino nomi: «Jannat rangi» to'liq kino
+
+🇺🇿 O'zbek tilida
+
+📅 Yuklangan sanasi: 2024-08-18
+sifati; [1080p]
+🗂 Yuklash: 8660
+
+🔎 Kinoning kodi: 8
+
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+
+
+@dp.message(F.text == "9")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAPZaN1ZAAGFRzMf6Y1Vh1fEeRfc8YrJAAIULAACR8ugS4DttSPq1kxWNgQ"
+        await message.answer_video(file_id, caption="""🍿 Kino nomi: «Iftorlik suvi»  to'liq kino
+
+🇺🇿 O'zbek tilida
+
+📅 Yuklangan sanasi: 2024-08-18
+sifati; [1080p]
+🗂 Yuklash: 8660
+
+🔎 Kinoning kodi: 9
+
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
 
 
 
