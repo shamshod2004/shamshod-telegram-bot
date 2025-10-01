@@ -170,6 +170,32 @@ async def send_video(message: types.Message):
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
 
 
+@dp.message(F.text == "6")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAPQaN1VrnDvEYo54rRqJCUZbRVN9ZkAAllPAAK-9NFJx-y63-ouTA42BA"
+        await message.answer_video(file_id, caption="""🍿 Kino nomi: «172 kun» to'liq kino
+
+🇺🇿 O'zbek tilida
+
+📅 Yuklangan sanasi: 2024-08-18
+sifati; [1080p]
+🗂 Yuklash: 8660
+
+🔎 Kinoning kodi: 6
+
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
 
 
 
