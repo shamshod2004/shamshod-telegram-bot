@@ -18,25 +18,23 @@ async def get_subs_count():
     return total
 
 
-async def check_subs(user_id: int) -> bool:
+# Kanallardagi jami obunachilar sonini hisoblaydi (faqat adminlar ko‘radi)
+async def get_subs_count():
+    total = 0
     for channel in CHANNELS:
-        chat_member = await bot.get_chat_member(chat_id=channel, user_id=user_id)
-        if chat_member.status in ["left", "kicked"]:
-            return False
-    return True
+        count = await bot.get_chat_member_count(channel)  # aiogram v3 da to‘g‘ri metod
+        total += count
+    return total
 
 @dp.message(CommandStart())
 async def start_handler(message: types.Message):
     user_id = message.from_user.id
+
     if not await check_subs(user_id):
-        instagram='kino.dunyouz'
         markup = InlineKeyboardMarkup(
             inline_keyboard=[
                 [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
-            ] + [
-                [InlineKeyboardButton(text=f"{instagram}",url=f"https://www.instagram.com/kino.dunyouz?igsh=MTdvdmJla2psaWhpMA==")],  
-                [InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]
-            ]
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
     else:
@@ -45,6 +43,10 @@ async def start_handler(message: types.Message):
             subs_count = await get_subs_count()
             text += f"\n📊 Jami obunachilar soni: {subs_count}"
         await message.answer(text)
+
+
+
+
 
 @dp.callback_query(lambda call: call.data == "check_subs")
 async def check_subs_callback(call: types.CallbackQuery):
