@@ -277,6 +277,32 @@ sifati; [1080p]
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
 
 
+@dp.message(F.text == "10")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAPvaN4NzWOZiaRpOCHpmYk3ARpDpZEAAoQUAAK4jfFKzLNPlW34YNY2BA"
+        await message.answer_video(file_id, caption="""🍿 Kino nomi: << Muqaddas Zamin>> to'liq kino
+
+🇺🇿 O'zbek tilida
+
+📅 Yuklangan sanasi: 2025-10-02
+sifati; [1080p]
+🗂 Yuklash: 8660
+
+🔎 Kinoning kodi: 10
+
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
 
 
 async def main():
