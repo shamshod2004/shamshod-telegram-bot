@@ -9,6 +9,15 @@ ADMINS = [6000119173]
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
+# Kanallardagi jami obunachilar sonini hisoblaydi (faqat adminlar ko‘radi)
+async def get_subs_count():
+    total = 0
+    for channel in CHANNELS:
+        count = await bot.get_chat_member_count(channel)  # aiogram v3 da to‘g‘ri metod
+        total += count
+    return total
+
+
 async def check_subs(user_id: int) -> bool:
     for channel in CHANNELS:
         chat_member = await bot.get_chat_member(chat_id=channel, user_id=user_id)
@@ -31,16 +40,23 @@ async def start_handler(message: types.Message):
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
     else:
-        await message.answer("Xush kelibsiz! Botdan foydalanishingiz mumkin. Kino kodini kiriting")
+        text = "Xush kelibsiz! Botdan foydalanishingiz mumkin."
+        if user_id in ADMINS:  # faqat adminlar uchun
+            subs_count = await get_subs_count()
+            text += f"\n📊 Jami obunachilar soni: {subs_count}"
+        await message.answer(text)
 
 @dp.callback_query(lambda call: call.data == "check_subs")
 async def check_subs_callback(call: types.CallbackQuery):
     user_id = call.from_user.id
     if await check_subs(user_id):
-        await call.message.edit_text("Rahmat! Siz barcha kanallarga obuna bo‘lgansiz. Botdan foydalanishingiz mumkin.")
+        text = "Rahmat! Siz barcha kanallarga obuna bo‘lgansiz."
+        if user_id in ADMINS:  # faqat adminlar uchun
+            subs_count = await get_subs_count()
+            text += f"\n📊 Jami obunachilar soni: {subs_count}"
+        await call.message.edit_text(text)
     else:
         await call.answer("Siz hali ham barcha kanallarga obuna bo‘lmagansiz!", show_alert=True)
-
 
 
 
