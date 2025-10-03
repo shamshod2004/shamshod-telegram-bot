@@ -96,8 +96,14 @@ async def send_video(message: types.Message):
     user_id = message.from_user.id
     
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
-        file_id = "BAACAgIAAxkBAAN_aNAEDQ_iEux5ZWFg36iiPbqk-GAAAqMSAAK066BKRsdVZQAB4qmgNgQ" #buyerga kino id kiritiladi
-        await message.answer_video(file_id, caption="🎬  Mening yigitim zombi") #buyerga kino nomi kiritiladi
+        file_id = "BAACAgQAAxkBAAIB7mjffyMGjHamuD2gWpH5dySLil2vAALnFwACI-6BUBpd5hYmbW6NNgQ" #buyerga kino id kiritiladi
+        await message.answer_video(file_id, caption="🎬  🎥 Mening yigitim zombi
+📹 Sifati: HD 720p
+📆 Yil: 2013
+🎞 Janr: Komediya Triller 
+🇺🇸 Davlat: AQSH
+🇺🇿 Tarjima: O'zbek tilida
+🗂 Yuklash: 1028") #buyerga kino nomi kiritiladi
     else:
         await message.answer('telegram kanalga obuna boling')
         markup = InlineKeyboardMarkup(
