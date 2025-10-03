@@ -474,6 +474,175 @@ Wendesday 8-Qism
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
 
+
+@dp.message(F.text == "19")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAICN2jfmQyhmGg8kLvaY7s4nTdeq0DFAAKyGQAC9QGhUA_2YnUomY6jNgQ"
+        await message.answer_video(file_id, caption="""Wednesday 2-fasl 1-qism
+• Oʻzbek tilida (Uzmovi tarjimasi)
+• #fantaziya #maktab #komedia #triller
+• Mobile HD Kesilmagan Orginal
+• Sifat: 480p
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+@dp.message(F.text == "20")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAICOWjfmTk8MnxZ-MVf3pKkbXsJat17AALnGQAC9QGhUPIj54jrtNipNgQ"
+        await message.answer_video(file_id, caption="""Wednesday 2-fasl 2-qism
+• Oʻzbek tilida (Uzmovi tarjimasi)
+• #fantaziya #maktab #komedia #triller
+• Mobile HD Kesilmagan Orginal
+• Sifat: 480p
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+@dp.message(F.text == "21")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAICO2jfmWvj839-qmE7NZYYJRSzI9dqAAKrewAC-4egSKUecVSwGtRgNgQ"
+        await message.answer_video(file_id, caption="""Wednesday 2-fasl 3-qism
+• Oʻzbek tilida (Uzmovi tarjimasi)
+• #fantaziya #maktab #komedia #triller
+• Mobile HD Kesilmagan Orginal
+• Sifat: 480p
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+@dp.message(F.text == "22")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAICPWjfmZ83DnC9uO1I3rmhwxY1-SWNAALIewAC-4egSGPXPzY7_PBONgQ"
+        await message.answer_video(file_id, caption="""Wednesday 2-fasl 4-qism
+• Oʻzbek tilida (Uzmovi tarjimasi)
+• #fantaziya #maktab #komedia #triller
+• Mobile HD Kesilmagan Orginal
+• Sifat: 480p
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+@dp.message(F.text == "23")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAICP2jfmdDOxuPZOJ-bQykIEPeXKQOuAAJlHAACJ1XAUf2_Uom-Cj5KNgQ"
+        await message.answer_video(file_id, caption="""Wednesday 2-fasl 5-qism
+• Oʻzbek tilida (Uzmovi tarjimasi)
+• #fantaziya #maktab #komedia #triller
+• Mobile HD Kesilmagan Orginal
+• Sifat: 480p
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+@dp.message(F.text == "24")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAICQWjfmgF2-N9cHw_auHYVSNT_DZAnAAKchgAChKnBSZ5IbXfph-arNgQ"
+        await message.answer_video(file_id, caption="""Wednesday 2-fasl 6-qism
+• Oʻzbek tilida (Uzmovi tarjimasi)
+• #fantaziya #maktab #komedia #triller
+• Mobile HD Kesilmagan Orginal
+• Sifat: 480p
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+
+@dp.message(F.text == "25")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAICQ2jfmi9VyJ_m1RajSobEHj3mPAkrAAKHggAChBnJSSZAiewXWh_XNgQ"
+        await message.answer_video(file_id, caption="""Wednesday 2-fasl 7-qism
+• Oʻzbek tilida (Uzmovi tarjimasi)
+• #fantaziya #maktab #komedia #triller
+• Mobile HD Kesilmagan Orginal
+• Sifat: 480p
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+
+@dp.message(F.text == "26")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAICRWjfmmuRYxBnyKS-HmpieYdsS6wIAAIGgwAChBnJSe-G2itus1-2NgQ"
+        await message.answer_video(file_id, caption="""Wednesday 2-fasl 8-qism ( final )
+• Oʻzbek tilida (Uzmovi tarjimasi)
+• #fantaziya #maktab #komedia #triller
+• Mobile HD Kesilmagan Orginal
+• Sifat: 480p
+‼️Serial bo'lsa, Keyingi qismini ko'rish uchun, keyingi sonni yozasiz.""")
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
 async def main():
     print('bot ishladi....')
     await dp.start_polling(bot)
