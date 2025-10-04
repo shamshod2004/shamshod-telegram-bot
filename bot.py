@@ -696,6 +696,7 @@ async def send_video(message: types.Message):
         file_id = "BAACAgIAAxkBAAICcGjhBn4xNa4MRlIPbCre1Pr1Kxa-AAJefwACR2oIS2-fzX8s0FE7NgQ"
         await message.answer_video(file_id, caption="""⌨️ KOD: #30
        bot; @UrtakKino_bot
+       Qolgan qisimlari pasdagi kanalga joylanib boriladi 
         kanal; @Tarjima_kinolar_uzb_tilda_z""")
                                                         
     else:
