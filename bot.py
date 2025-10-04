@@ -646,13 +646,13 @@ async def send_video(message: types.Message):
 
 
 # 📌 2️⃣ Xabar "2" bo‘lsa, oldindan olingan `file_id` dagi videoni yuborish
-@dp.message(F.text == "27")
+@dp.message(F.text == "28")
 async def send_video(message: types.Message):
     user_id = message.from_user.id
     
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
-        file_id = "BAACAgEAAxkBAAICWmjfomdEIJm9RBHwMfMOihVrLygdAAL3AwAC6SvJRoiAhKj_Di2ZNgQ"
-        await message.answer_video(file_id, caption="""⌨️ KOD: #27  
+        file_id = "BAACAgIAAxkBAAICbGjhBe1yE1MM_RgzkKNCe8rXGsfqAALuiwACR2oAAUuLnifVvxNqUDYE"
+        await message.answer_video(file_id, caption="""⌨️ KOD: #28 
        bot; @UrtakKino_bot
         kanal; @Tarjima_kinolar_uzb_tilda_z""")
                                                         
@@ -664,6 +664,49 @@ async def send_video(message: types.Message):
             ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+
+# 📌 2️⃣ Xabar "2" bo‘lsa, oldindan olingan `file_id` dagi videoni yuborish
+@dp.message(F.text == "29")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAICbmjhBlZWOEQ99VWC8FYzyNGjGayXAALbjgACR2oAAUtgut-rXkt7LDYE"
+        await message.answer_video(file_id, caption="""⌨️ KOD: #29 
+       bot; @UrtakKino_bot
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+
+# 📌 2️⃣ Xabar "2" bo‘lsa, oldindan olingan `file_id` dagi videoni yuborish
+@dp.message(F.text == "30")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAICcGjhBn4xNa4MRlIPbCre1Pr1Kxa-AAJefwACR2oIS2-fzX8s0FE7NgQ"
+        await message.answer_video(file_id, caption="""⌨️ KOD: #30
+       bot; @UrtakKino_bot
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
 
 
 async def main():
