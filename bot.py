@@ -723,7 +723,7 @@ async def send_video(message: types.Message):
 🌏Davlat: AQSH
 📆Yili: 2023-yil
 🎞️Janri: #Jangari #Tarixiy #Drama
-        ⌨️ KOD: #30
+        ⌨️ KOD: #32
        bot; @UrtakKino_bot
 
         kanal; @Tarjima_kinolar_uzb_tilda_z""")
@@ -747,6 +747,34 @@ async def send_video(message: types.Message):
         await message.answer_video(file_id, caption="""⌨️ KOD: #31 
        bot; @UrtakKino_bot
         Qolgan qisimlari pasdagi kanalga joylanib boriladi 
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+@dp.message(F.text == "33")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgEAAxkBAAICv2jh6JcAAeGPjr7tR8Q-VlcNifuyEwACUAMAAncLwUefwkp0RtNsjTYE"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi: 300 spartalik
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: AQSH
+📆Yili: 2023-yil
+🎞️Janri: #Jangari #Tarixiy #Drama
+        ⌨️ KOD: #33
+       bot; @UrtakKino_bot
+
         kanal; @Tarjima_kinolar_uzb_tilda_z""")
                                                         
     else:
