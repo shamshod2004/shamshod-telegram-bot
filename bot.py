@@ -815,6 +815,181 @@ async def send_video(message: types.Message):
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
 
+@dp.message(F.text == "35")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAIDAAFo4gABZHMkO0gNAsks5EEh8pisAAF-AAIcBwACs-WRUZ5q9SAKGQjeNgQ"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi: Yashil Fonus 
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: AQSH
+📆Yili:  2011-yil
+🎞️Janri: #Jangari  #Drama #fantastik
+        ⌨️ KOD: #35
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+@dp.message(F.text == "36")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAIDBWjiAAFkfB0tAz14QnjZi0reUaLX8gACsBMAApA28FFFiTvKpS-LuDYE"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi: Oʻqchi | Snayper
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: AQSH
+📆Yili:  2011-yil
+🎞️Janri: #Jangari  #Drama #fantastik
+        ⌨️ KOD: #36
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+
+@dp.message(F.text == "37")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAIDBGjiAAFk-GnND2r88B-m7Qsl-8aR3wACDA8AAs_mmVBtIND7wIm1WTYE"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi: Tofon
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: Hindiston 
+📆Yili:  2011-yil
+🎞️Janri: #Jangari  #Drama #fantastik 
+        ⌨️ KOD: #37
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+@dp.message(F.text == "38")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAIDAmjiAAFkwuEDK279Ls0eCKI9Mk7HhwAChwkAAnd7yFEi6oMthl7iAjYE"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi: Buyuk Devor 
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: AQSH, Xitoy 
+📆Yili:  2016-yil
+🎞️Janri: #Jangari #Fantastik 
+        ⌨️ KOD: #38
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+@dp.message(F.text == "39")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgIAAxkBAAIDAWjiAAFku8vZqAtcF3GwQ9rRViPvKQACLgkAAlW_KEigMx2HpOaveDYE"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi: T-34
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: Rossiya
+📆Yili:  2016-yil
+🎞️Janri: #Jangari #Tank 
+        ⌨️ KOD: #39
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+@dp.message(F.text == "40")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAIC_2jiAAFk6SRfr0jS6zXis-wo1mwt7AACMgoAAkQN0FCpyWmEbFwDpDYE"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi: Qahr
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: Hindiston 
+📆Yili:  2014-yil
+🎞️Janri: #Jangari #urush #dramma
+        ⌨️ KOD: #40
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
 
 
 
