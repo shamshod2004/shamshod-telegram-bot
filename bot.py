@@ -1,4 +1,4 @@
-from aiogram import Bot, Dispatcher, types,F
+    from aiogram import Bot, Dispatcher, types,F
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.filters import CommandStart
 import asyncio
@@ -1152,6 +1152,35 @@ async def send_video(message: types.Message):
 📆Yili:  2023-yil
 🎞️Janri:  #romantika #komediya #detektiv #boyevik #jangari 
         ⌨️ KOD: #45
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+@dp.message(F.text == "47")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAIEFmjnJV-5Bb15JKPORLkojQkOAUg7AALFGwACTKyoUDgWkrgEEzzANgQ"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi: Qaroqchi Ilya Muromistga qarshi
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: rossiya 
+📆Yili:  2025-yil
+🎞️Janri:  #romantika #komediya #detektiv #boyevik #jangari 
+        ⌨️ KOD: #47
        bot; @UrtakKino_bot
 
         kanal; @Tarjima_kinolar_uzb_tilda_z""")
