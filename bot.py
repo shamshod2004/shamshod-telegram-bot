@@ -1143,7 +1143,6 @@ async def send_video(message: types.Message):
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
         file_id = "BAACAgQAAxkBAAIDuGjmIlMX5RoIq-kIorF8B2bzhK3iAAKKGQACuosIUND-xyfo_-fYNgQ"
         await message.answer_video(file_id, caption="""
-
 🎥Nomi: Yordamga ! Arjun 
 ➖➖➖➖➖➖➖➖➖➖
 🌍Tili: Oʻzbek Tilida 
@@ -1172,7 +1171,6 @@ async def send_video(message: types.Message):
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
         file_id = "BAACAgQAAxkBAAIEFmjnJV-5Bb15JKPORLkojQkOAUg7AALFGwACTKyoUDgWkrgEEzzANgQ"
         await message.answer_video(file_id, caption="""
-
 🎥Nomi: Qaroqchi Ilya Muromistga qarshi
 ➖➖➖➖➖➖➖➖➖➖
 🌍Tili: Oʻzbek Tilida 
@@ -1193,8 +1191,6 @@ async def send_video(message: types.Message):
             ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
-
-
 
 
 async def main():
