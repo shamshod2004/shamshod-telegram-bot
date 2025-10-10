@@ -1171,18 +1171,7 @@ async def send_video(message: types.Message):
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
         file_id = "BAACAgQAAxkBAAIEFmjnJV-5Bb15JKPORLkojQkOAUg7AALFGwACTKyoUDgWkrgEEzzANgQ"
         await message.answer_video(file_id, caption="""
-🎥Nomi: Qaroqchi Ilya Muromistga qarshi
-➖➖➖➖➖➖➖➖➖➖
-🌍Tili: Oʻzbek Tilida 
-📀Sifati: 1080P Mobile HD
-🌏Davlat: rossiya 
-📆Yili:  2025-yil
-🎞️Janri:  #romantika #komediya #detektiv #boyevik #jangari 
-        ⌨️ KOD: #47
-       bot; @UrtakKino_bot
-
-        kanal; @Tarjima_kinolar_uzb_tilda_z""")
-                                                        
+🎥Nomi: Qaroqchi Ilya Muromistga qarshi"""                                                   
     else:
         await message.answer('telegram kanalga obuna boling')
         markup = InlineKeyboardMarkup(
