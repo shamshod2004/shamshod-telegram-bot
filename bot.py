@@ -1381,6 +1381,119 @@ async def send_video(message: types.Message):
             ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+@dp.message(F.text == "55")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAIE9mjt3mYdxZDNFt9rv8BUWWmJr7kVAAI8GAACFrQJU5sU3wn3gS2BNgQ"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi:Yomon yigit va men
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat:AQSH filim
+📆Yili:  2024-yil
+🎞️Janri:  #romantika #komediya  
+        ⌨️ KOD: #55
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+@dp.message(F.text == "56")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAIE_Gjt4PtNONN8KA7dNdC6VroKV3pTAALsGAACEYKJUbDnoz1KGFdLNgQ"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi:Urma xotinjon
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: HINDISTONfilim
+📆Yili:  2022-yil
+🎞️Janri:  #romantika #komediya  
+        ⌨️ KOD: #56
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+@dp.message(F.text == "57")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAIE_mjt4UbNZv3Gc7ZglvaJfxIjw-F6AAIKGgACu45wUstZlrrIMjwNNgQ"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi:Sevishganlar
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: Fransiya filim
+📆Yili:  2012-yil
+🎞️Janri:  #romantika #komediya  
+        ⌨️ KOD: #57
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
+
+@dp.message(F.text == "58")
+async def send_video(message: types.Message):
+    user_id = message.from_user.id
+    
+    if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
+        file_id = "BAACAgQAAxkBAAIFAAFo7eHoP2rJG3EGIBqskZ2CDul_zwACHhsAAriN0VJDklXpb8dL6TYE"
+        await message.answer_video(file_id, caption="""
+
+🎥Nomi:Harbiy  asir
+➖➖➖➖➖➖➖➖➖➖
+🌍Tili: Oʻzbek Tilida 
+📀Sifati: 1080P Mobile HD
+🌏Davlat: AQSH filim
+📆Yili:  2025-yil
+🎞️Janri:  #romantika #komediya #jangari
+        ⌨️ KOD: #58
+       bot; @UrtakKino_bot
+
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")
+                                                        
+    else:
+        await message.answer('telegram kanalga obuna boling')
+        markup = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
+            ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
+        )
+        await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
 
 async def main():
     print('bot ishladi....')
