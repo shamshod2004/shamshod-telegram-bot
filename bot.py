@@ -1622,7 +1622,7 @@ async def send_video(message: types.Message):
 🌏Davlat:Hindiston filim
 📆Yili:  2024-yil
 🎞️Janri:  #romantika #komediya #jangari
-        ⌨️ KOD: #63
+        ⌨️ KOD: #63 
        bot; @UrtakKino_bot
 
         kanal; @Tarjima_kinolar_uzb_tilda_z""")
