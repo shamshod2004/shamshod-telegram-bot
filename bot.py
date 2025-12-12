@@ -33,8 +33,7 @@ async def start_handler(message: types.Message):
         markup = InlineKeyboardMarkup(
             inline_keyboard=[
                 [InlineKeyboardButton(text=f"🔗 {channel}", url=f"https://t.me/{channel[1:]}")] for channel in CHANNELS
-            ] + [
-                [InlineKeyboardButton(text=f"{instagram}",url=f"https://www.instagram.com/movi_uz24?igsh=MTh2Y3U1ZjlmOWNlMA==")],  
+            ] + [ 
                 [InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]
             ]
         )
