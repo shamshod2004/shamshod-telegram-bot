@@ -1921,7 +1921,6 @@ async def send_video(message: types.Message):
     if await check_subs(user_id):  # Faqat obuna bo‘lganlarga javob qaytaradi
         file_id = "BAACAgQAAxkBAAIGPmmBeUiR2cwEy3ktKTUVqsd6kxebAAK5HgACOZGhU2kg9MSogxLOOAQ"
         await message.answer_video(file_id, caption="""
-
 ⬇️⬇️TREYLERDAGI_KINO⬇️⬇️
 ➖➖➖➖➖➖➖➖➖
 🎬 :  Pochcha Koreyada [2025y]
@@ -1930,7 +1929,6 @@ async def send_video(message: types.Message):
 🎭 : #komediya #sarguzasht #qorakomediya 
         ⌨️ KOD: #74
        bot; @UrtakKino_bot
-
         kanal; @Tarjima_kinolar_uzb_tilda_z""")
                                                         
     else:
@@ -1941,10 +1939,6 @@ async def send_video(message: types.Message):
             ] + [[InlineKeyboardButton(text="✅ Tekshirish", callback_data="check_subs")]]
         )
         await message.answer("Botdan foydalanish uchun quyidagi kanallarga obuna bo‘ling:", reply_markup=markup)
-
-
-
-
 
 async def main():
     print('bot ishladi....')
