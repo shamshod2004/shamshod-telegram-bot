@@ -2033,8 +2033,7 @@ async def send_video(message: types.Message):
 🗂 Yuklash: 6511
         ⌨️ KOD: #79
        bot; @UrtakKino_bot
-        kanal; @Tarjima_kinolar_uzb_tilda_z""")
-                                                        
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")                                                
     else:
         await message.answer('telegram kanalga obuna boling')
         markup = InlineKeyboardMarkup(
@@ -2053,8 +2052,7 @@ async def send_video(message: types.Message):
 🗂 Yuklash: 6512
         ⌨️ KOD: #80
        bot; @UrtakKino_bot
-        kanal; @Tarjima_kinolar_uzb_tilda_z""")
-                                                        
+        kanal; @Tarjima_kinolar_uzb_tilda_z""")                                                  
     else:
         await message.answer('telegram kanalga obuna boling')
         markup = InlineKeyboardMarkup(
@@ -2067,7 +2065,6 @@ async def send_video(message: types.Message):
 async def main():
     print('bot ishladi....')
     await dp.start_polling(bot)
-
 if __name__ == "__main__":
     asyncio.run(main())
 
